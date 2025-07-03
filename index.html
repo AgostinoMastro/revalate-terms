@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revalate Pricing</title>
+  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & base */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: #111111;
+      color: #ffffff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    /* Center container in viewport */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    /* Constrain width & layout */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    /* Logo styling - centered and improved */
+    .logo {
+      margin-bottom: 40px;
+      height: 50px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+    
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Pricing table fills container width */
+    stripe-pricing-table {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 8px 16px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(180, 199, 204, 0.1);
+    }
+    
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      padding: 30px 0 20px;
+      border-top: 1px solid rgba(180, 199, 204, 0.2);
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+      font-size: 14px;
+    }
+    
+    footer nav {
+      margin-bottom: 20px;
+    }
+    
+    footer nav a {
+      color: #999;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    
+    footer nav a:hover {
+      color: #B4C7CC;
+      text-decoration: none;
+    }
+    
+    footer nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      background: #B4C7CC;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    footer nav a:hover::after {
+      width: 100%;
+    }
+    
+    footer p {
+      color: #666;
+      margin-top: 0;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      
+      .logo {
+        height: 40px;
+        margin-bottom: 30px;
+      }
+      
+      footer nav a {
+        margin: 0 10px;
+        font-size: 13px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      footer nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      
+      footer nav {
+        line-height: 1.8;
+      }
+    }
+    
+    /* Animation for page load */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .container,
+    footer {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    
+    footer {
+      animation-delay: 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img
+      src="https://storage.googleapis.com/rev-logo-files/Asset%204%403x-8.png"
+      alt="Revalate logo"
+      class="logo"
+    />
+
+    <stripe-pricing-table
+      pricing-table-id="prctbl_1RemWJL1GrJAX8xue2lsYNB8"
+      publishable-key="pk_live_51MEKJpL1GrJAX8xuTMcqrHSURnwCeFn6InaL2gLT4s2TqA1uaFoxNQBzOFXh1obkvDcKSU0KJ3VGD7AyyPaycz9S00h1F7mXDf">
+    </stripe-pricing-table>
+  </div>
+
+  <footer>
+    <nav>
+      <a href="/">Pricing</a> |
+      <a href="/terms-of-service/">Terms of Service</a> |
+      <a href="/privacy-policy/">Privacy Policy</a> |
+      <a href="/understand-usage/">Understand Usage</a> |
+      <a href="/support-schedule/">Support Schedule</a>
+    </nav>
+    <p>Copyright © Revalate Inc. 2025</p>
+  </footer>
+</body>
+</html>
