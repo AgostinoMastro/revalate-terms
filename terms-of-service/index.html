@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | Revalate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body { 
+      margin: 0; 
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+      background-color: #111111; 
+      color: #ffffff; 
+      line-height: 1.6;
+    }
+    
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 40px 20px; 
+    }
+    
+    header { 
+      display: flex; 
+      align-items: center; 
+      margin-bottom: 50px; 
+    }
+    
+    header img { 
+      height: 40px; 
+      transition: transform 0.3s ease;
+    }
+    
+    header img:hover {
+      transform: scale(1.05);
+    }
+    
+    h1 { 
+      font-size: 32px; 
+      margin-bottom: 20px; 
+      font-weight: 600;
+      color: #ffffff;
+    }
+    
+    h2 { 
+      font-size: 24px; 
+      margin-top: 40px; 
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #B4C7CC;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 24px;
+      background: linear-gradient(135deg, #B4C7CC 0%, rgba(180, 199, 204, 0.6) 100%);
+      border-radius: 2px;
+    }
+    
+    p { 
+      line-height: 1.6; 
+      margin-bottom: 20px; 
+      color: #cccccc;
+      font-size: 16px;
+    }
+    
+    p em {
+      color: #999;
+      font-style: italic;
+    }
+    
+    p strong {
+      color: #B4C7CC;
+      font-weight: 600;
+    }
+    
+    /* Enhanced list styling */
+    ul { 
+      margin-bottom: 25px;
+      padding-left: 0;
+      list-style: none;
+    }
+    
+    ul li {
+      position: relative;
+      padding: 14px 20px 14px 40px;
+      margin-bottom: 10px;
+      background: rgba(180, 199, 204, 0.05);
+      border: 1px solid rgba(180, 199, 204, 0.15);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    ul li:hover {
+      background: rgba(180, 199, 204, 0.08);
+      border-color: rgba(180, 199, 204, 0.25);
+      transform: translateX(4px);
+    }
+    
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #B4C7CC;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    ul li strong {
+      color: #B4C7CC;
+      font-weight: 600;
+    }
+    
+    /* Section styling */
+    .terms-section {
+      background: rgba(180, 199, 204, 0.03);
+      border: 1px solid rgba(180, 199, 204, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .terms-section:hover {
+      background: rgba(180, 199, 204, 0.05);
+      border-color: rgba(180, 199, 204, 0.2);
+    }
+    
+    .terms-section h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    
+    .terms-section p:last-child,
+    .terms-section ul:last-child {
+      margin-bottom: 0;
+    }
+    
+    /* Header section styling */
+    .header-section {
+      background: linear-gradient(135deg, rgba(180, 199, 204, 0.08) 0%, rgba(180, 199, 204, 0.03) 100%);
+      border: 1px solid rgba(180, 199, 204, 0.2);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .header-section h1 {
+      margin-bottom: 10px;
+    }
+    
+    .header-section p:last-child {
+      margin-bottom: 0;
+    }
+    
+    /* Intro tagline styling */
+    .intro-section {
+      background: rgba(180, 199, 204, 0.06);
+      border: 1px solid rgba(180, 199, 204, 0.2);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    
+    .intro-section h2 {
+      margin: 0 0 15px 0;
+      padding-left: 0;
+      font-size: 20px;
+    }
+    
+    .intro-section h2::before {
+      display: none;
+    }
+    
+    .intro-section p {
+      margin-bottom: 0;
+      font-size: 17px;
+      font-style: italic;
+      color: #e0e0e0;
+    }
+    
+    /* Special styling for guarantee section */
+    .guarantee-section {
+      background: linear-gradient(135deg, rgba(180, 199, 204, 0.1) 0%, rgba(180, 199, 204, 0.05) 100%);
+      border: 2px solid rgba(180, 199, 204, 0.3);
+    }
+    
+    .guarantee-section:hover {
+      border-color: rgba(180, 199, 204, 0.5);
+    }
+    
+    /* Footer styling */
+    footer { 
+      margin-top: 80px; 
+      padding: 30px 0 20px; 
+      border-top: 1px solid rgba(180, 199, 204, 0.2); 
+      text-align: center; 
+      font-size: 14px; 
+    }
+    
+    footer nav {
+      margin-bottom: 20px;
+    }
+    
+    footer nav a { 
+      color: #999; 
+      margin: 0 15px; 
+      text-decoration: none; 
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    
+    footer nav a:hover { 
+      color: #B4C7CC;
+      text-decoration: none;
+    }
+    
+    footer nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      background: #B4C7CC;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    footer nav a:hover::after {
+      width: 100%;
+    }
+    
+    footer p {
+      color: #666;
+      margin-bottom: 0;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 15px;
+      }
+      
+      h1 {
+        font-size: 28px;
+      }
+      
+      h2 {
+        font-size: 20px;
+        padding-left: 16px;
+      }
+      
+      h2::before {
+        width: 3px;
+        height: 20px;
+      }
+      
+      .terms-section,
+      .header-section,
+      .intro-section {
+        padding: 20px;
+      }
+      
+      ul li {
+        padding: 12px 16px 12px 36px;
+      }
+      
+      ul li::before {
+        left: 14px;
+      }
+      
+      footer nav a {
+        margin: 0 10px;
+        font-size: 13px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      footer nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      
+      footer nav {
+        line-height: 1.8;
+      }
+    }
+    
+    /* Animation for page load */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .header-section,
+    .intro-section,
+    .terms-section {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    
+    .intro-section {
+      animation-delay: 0.1s;
+    }
+    
+    .terms-section:nth-child(odd) {
+      animation-delay: 0.1s;
+    }
+    
+    .terms-section:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/">
+        <img src="https://storage.googleapis.com/rev-logo-files/Asset%204%403x-8.png" alt="Revalate Logo" />
+      </a>
+    </header>
+    <main>
+      <div class="header-section">
+        <h1>Terms of Service</h1>
+        <p><em>Last Updated: February 27, 2025</em></p>
+      </div>
+
+      <div class="intro-section">
+        <h2>Clear Terms, Confident Partnerships</h2>
+        <p>Our terms are designed to empower your journey with us—transparent, fair, and tailored to support your success.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>INTRODUCTION</h2>
+        <p>This Terms of Service Agreement ("Agreement") is between Revalate Inc. ("Revalate","Company," "we," "us," or "our") and you ("Customer," "you," or "your"). This Agreement governs your use of our services ("Services"). Please read it carefully. By accessing our Services, you agree to comply with all the terms and conditions stated in this Agreement.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>SERVICES</h2>
+        <p>Revalate provides custom software development, automation, and integration services focused on improving operational efficiency, specifically tailored for business needs.</p>
+        <p>All services will be outlined in a specific project proposal, including scope, timelines, and deliverables. Any changes to the scope of work must be agreed upon in writing by both parties.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>FEES AND PAYMENT</h2>
+        <ul>
+          <li><strong>Fees:</strong> The fees for the services are outlined in the project estimate provided to the Client. Any changes to the services or additional work beyond the agreed scope will be billed at Revalate's hourly rate or as mutually agreed upon in writing.</li>
+          <li><strong>Payment Schedule:</strong> Payments will be made according to the customized schedule outlined in the project proposal. A deposit may be required to begin work, and additional payments will be processed according to the agreed schedule. Failure to make timely payments may result in delays or suspension of services.</li>
+          <li><strong>Late Payments:</strong> Late payments will incur interest of 2% per month (26.82% per year) on any outstanding balances. Revalate reserves the right to suspend services if payments are not made on time.</li>
+        </ul>
+      </div>
+
+      <div class="terms-section guarantee-section">
+        <h2>Money-Back Guarantee</h2>
+        <p>If, after using our custom software solution for 6 months, you do not experience improvement in at least one of the following areas, we will refund the full service cost, or work until you do:</p>
+        <ul>
+          <li><strong>Time Efficiency:</strong> Reduction in time spent on tasks for which the functions were specifically built.</li>
+          <li><strong>Workload Reduction:</strong> Decrease in the volume of tasks required for functions the features were intended to streamline.</li>
+          <li><strong>Enhanced Visibility:</strong> Improved tracking and visibility of task performance and key performance indicators (KPIs) critical to your business.</li>
+        </ul>
+        <p><strong>Conditions:</strong></p>
+        <ul>
+          <li>You must use the software consistently as intended in your operational environment.</li>
+          <li>You must participate in our initial training sessions and follow the recommended practices for the best outcomes.</li>
+          <li>Improvements are measured from the baseline metrics established prior to software implementation, documented in our initial assessment phase.</li>
+        </ul>
+        <p><strong>Process:</strong> If you believe our software has not improved your operations as guaranteed, contact us to initiate a review. Our team will assess the situation with you and verify the metrics. If it is determined that the software did not deliver on our guarantee, we will issue a refund for the full year's service cost.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>TERM AND TERMINATION</h2>
+        <p>This Agreement will commence upon receipt of the first payment or deposit made by you for our services and will continue for an initial term of twelve (12) months (the "Initial Term"), unless terminated earlier in accordance with the provisions outlined herein. After the Initial Term, this Agreement will automatically renew for subsequent one (1) month periods (each a "Renewal Term"), unless either party gives the other party written notice of its intent not to renew this Agreement at least ten (10) days prior to the end of the Initial Term or any Renewal Term.</p>
+        <p>If neither party opts out of the renewal, the Agreement will continue in effect under the same terms and conditions. In the event of early termination as provided herein, the appropriate procedures as stipulated in this Agreement will be enacted.</p>
+        <p>By making the first payment or deposit, you acknowledge and agree to the terms of this Agreement, and it will be considered legally binding between us.</p>
+        <p>Either Party will have the right to terminate this contract without penalty with ten (10) days written notice for the following reasons: (i) either Party commits a material breach of a material provision of this Agreement and, in the case of a breach which is capable of remedy, fails to remedy it within 21 days after receiving written notice from the non-breaching party of the breach; or (ii) either Party becomes incapable, for any reason, of performing the Services required hereunder, or ceases to carry on business for any reason whatsoever.</p>
+        <p>Additionally, as stated in the payment and fees section, should you wish to cancel our services, you may do so at any time without penalty. However, it is important to note that we do not provide refunds or pro-rated amounts for services already delivered or in progress upon cancellation. All payments rendered to us for our services are deemed final.</p>
+        <p>At the end of the Term, the Customer shall pay Revalate all Fees and expenses it owes Revalate under the terms of this Agreement.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>MODIFICATION TO TERMS OF SERVICE</h2>
+        <p>We reserve the right to modify, update, or change these Terms of Service at any time without prior notice. Any modifications, updates, or changes will be effective immediately upon posting on our website or notifying you through other appropriate means. It is your responsibility to review the Terms of Use periodically for any such changes. By continuing to access or use our services after the modifications, updates, or changes have been posted, you acknowledge and agree to be bound by the revised Terms of Use.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>LIMITED USE OF MARKS</h2>
+        <p>Subject to the terms and conditions of this Agreement, each Party grants to the other Party a non-exclusive, royalty-free license to use the Party's trademark, trade name, and logo (the "Marks") for the sole purpose of fulfilling the terms of this Agreement. Title to the Marks shall remain with the owner of the Marks. Any use of the Marks of a Party shall be subject to that Party's right to review and approve, at its sole discretion, such use before any publication, distribution, or dissemination. Subject to this section, the Customer retains exclusive rights to its Marks used in the execution of this project. No other use of Customer's Marks shall be made without written permission from the Customer.</p>
+      </div>
+
+    </main>
+    <footer>
+      <nav>
+        <a href="/">Pricing</a> |
+        <a href="/terms-of-service/">Terms of Service</a> |
+        <a href="/privacy-policy/">Privacy Policy</a> |
+        <a href="/understand-usage/">Understand Usage</a> |
+        <a href="/support-schedule/">Support Schedule</a>
+      </nav>
+      <p>Copyright © Revalate Inc. 2025</p>
+    </footer>
+  </div>
+</body>
+</html>
