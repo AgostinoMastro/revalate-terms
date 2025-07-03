@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support Schedule | Revalate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body { 
+      margin: 0; 
+      padding: 0; 
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+      background-color: #111111; 
+      color: #ffffff; 
+      line-height: 1.6;
+    }
+    
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 40px 20px; 
+    }
+    
+    header { 
+      display: flex; 
+      align-items: center; 
+      margin-bottom: 50px; 
+    }
+    
+    header img { 
+      height: 40px; 
+      transition: transform 0.3s ease;
+    }
+    
+    header img:hover {
+      transform: scale(1.05);
+    }
+    
+    h1 { 
+      font-size: 32px; 
+      margin-bottom: 20px; 
+      font-weight: 600;
+      color: #ffffff;
+    }
+    
+    h2 { 
+      font-size: 24px; 
+      margin-top: 40px; 
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #B4C7CC;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 24px;
+      background: linear-gradient(135deg, #B4C7CC 0%, rgba(180, 199, 204, 0.6) 100%);
+      border-radius: 2px;
+    }
+    
+    p { 
+      line-height: 1.6; 
+      margin-bottom: 25px; 
+      color: #cccccc;
+      font-size: 16px;
+    }
+    
+    p strong {
+      color: #B4C7CC;
+      font-weight: 600;
+    }
+    
+    /* Enhanced list styling */
+    ul { 
+      list-style: none; 
+      padding-left: 0; 
+      margin-bottom: 30px;
+    }
+    
+    ul li {
+      position: relative;
+      padding: 16px 20px 16px 50px;
+      margin-bottom: 12px;
+      background: rgba(180, 199, 204, 0.05);
+      border: 1px solid rgba(180, 199, 204, 0.2);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    ul li:hover {
+      background: rgba(180, 199, 204, 0.08);
+      border-color: rgba(180, 199, 204, 0.4);
+      transform: translateX(4px);
+    }
+    
+    ul li::before { 
+      content: "✓";
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #B4C7CC;
+      font-weight: bold;
+      font-size: 16px;
+      width: 20px;
+      height: 20px;
+      background: rgba(180, 199, 204, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    
+    ul li strong {
+      color: #B4C7CC;
+      font-weight: 600;
+    }
+    
+    /* Support sections styling */
+    .support-section {
+      background: rgba(180, 199, 204, 0.03);
+      border: 1px solid rgba(180, 199, 204, 0.15);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .support-section:hover {
+      background: rgba(180, 199, 204, 0.06);
+      border-color: rgba(180, 199, 204, 0.25);
+    }
+    
+    .support-section h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    
+    .support-section ul {
+      margin-bottom: 0;
+    }
+    
+    /* Intro section styling */
+    .intro-section {
+      background: linear-gradient(135deg, rgba(180, 199, 204, 0.08) 0%, rgba(180, 199, 204, 0.03) 100%);
+      border: 1px solid rgba(180, 199, 204, 0.2);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 40px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .intro-section p:last-child {
+      margin-bottom: 0;
+    }
+    
+    /* Footer styling */
+    footer { 
+      margin-top: 80px; 
+      padding: 30px 0 20px; 
+      border-top: 1px solid rgba(180, 199, 204, 0.2); 
+      text-align: center; 
+      font-size: 14px; 
+    }
+    
+    footer nav {
+      margin-bottom: 20px;
+    }
+    
+    footer nav a { 
+      color: #999; 
+      margin: 0 15px; 
+      text-decoration: none; 
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    
+    footer nav a:hover { 
+      color: #B4C7CC;
+      text-decoration: none;
+    }
+    
+    footer nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      background: #B4C7CC;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    footer nav a:hover::after {
+      width: 100%;
+    }
+    
+    footer p {
+      color: #666;
+      margin-bottom: 0;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 15px;
+      }
+      
+      h1 {
+        font-size: 28px;
+      }
+      
+      h2 {
+        font-size: 20px;
+        padding-left: 16px;
+      }
+      
+      h2::before {
+        width: 3px;
+        height: 20px;
+      }
+      
+      .support-section,
+      .intro-section {
+        padding: 24px;
+      }
+      
+      ul li {
+        padding: 14px 16px 14px 44px;
+      }
+      
+      ul li::before {
+        left: 16px;
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+      }
+      
+      footer nav a {
+        margin: 0 10px;
+        font-size: 13px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      footer nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      
+      footer nav {
+        line-height: 1.8;
+      }
+    }
+    
+    /* Animation for page load */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .intro-section,
+    .support-section {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    
+    .support-section:nth-child(odd) {
+      animation-delay: 0.1s;
+    }
+    
+    .support-section:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/">
+        <img src="https://storage.googleapis.com/rev-logo-files/Asset%204%403x-8.png" alt="Revalate Logo" />
+      </a>
+    </header>
+    <main>
+      <h1>Support Schedule</h1>
+      
+      <div class="intro-section">
+        <p><strong>Reliable App Support and Training for Your Business</strong></p>
+        <p>At Revalate, we believe exceptional support is the foundation of successful partnerships. Our support schedule is designed to ensure you have access to the right assistance, at the right time, through the right channels. Whether it's resolving urgent issues, providing personalized training, or proactively improving your app's performance, our dedicated team is here to help you every step of the way. Explore our support options tailored to meet the unique demands of your business.</p>
+      </div>
+      
+      <div class="support-section">
+        <h2>Response Times</h2>
+        <ul>
+          <li><strong>Standard Support:</strong> Response within 48 hours.</li>
+          <li><strong>Priority Support:</strong> Response within 24 hours.</li>
+          <li><strong>Same-Day Support:</strong> Response within the same day on Enterprise plans or upon request.</li>
+        </ul>
+      </div>
+      
+      <div class="support-section">
+        <h2>Business Hours</h2>
+        <ul>
+          <li><strong>Monday to Friday:</strong> 9 AM - 5 PM EST.</li>
+          <li><strong>Emergency Support:</strong> Available with Enterprise plans or upon request.</li>
+        </ul>
+      </div>
+      
+      <div class="support-section">
+        <h2>Support Channels</h2>
+        <ul>
+          <li><strong>Email Support:</strong> Ideal for non-urgent inquiries.</li>
+          <li><strong>Phone Support:</strong> Dedicated helpline available during business hours.</li>
+          <li><strong>Dedicated Account Manager:</strong> A single point of contact for bi-weekly check-ins, support requests, and feedback.</li>
+        </ul>
+      </div>
+      
+      <div class="support-section">
+        <h2>Training and Onboarding</h2>
+        <ul>
+          <li><strong>Initial Onboarding:</strong> Comprehensive training sessions within the first two weeks after project delivery.</li>
+          <li><strong>Refresher Training:</strong> Available on-demand at an additional cost.</li>
+        </ul>
+      </div>
+      
+      <div class="support-section">
+        <h2>Proactive Support</h2>
+        <ul>
+          <li><strong>Monthly Reviews:</strong> Performance and usage reviews to identify and address potential issues proactively.</li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <a href="/">Pricing</a> |
+        <a href="/terms-of-service/">Terms of Service</a> |
+        <a href="/privacy-policy/">Privacy Policy</a> |
+        <a href="/understand-usage/">Understand Usage</a> |
+        <a href="/support-schedule/">Support Schedule</a>
+      </nav>
+      <p>Copyright © Revalate Inc. 2025</p>
+    </footer>
+  </div>
+</body>
+</html>
